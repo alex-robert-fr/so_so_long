@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pacman.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 16:18:19 by alrobert          #+#    #+#             */
-/*   Updated: 2023/05/29 16:18:59 by alrobert         ###   ########.fr       */
+/*   Created: 2023/05/29 16:48:14 by alrobert          #+#    #+#             */
+/*   Updated: 2023/05/29 17:16:44 by alrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PACMAN_H
-# define PACMAN_H
-# include "game.h"
+#include "test.h"
+#include "ft_printf.h"
+#include "libft.h"
 
-int		launch(char *path_map);
-t_game	*init_game(void);
-
-#endif
+int	main(void)
+{
+	test_check_path("Check path");
+	return (0);
+}

@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pacman.h                                           :+:      :+:    :+:   */
+/*   test.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 16:18:19 by alrobert          #+#    #+#             */
-/*   Updated: 2023/05/29 16:18:59 by alrobert         ###   ########.fr       */
+/*   Created: 2023/05/29 16:59:37 by alrobert          #+#    #+#             */
+/*   Updated: 2023/05/29 17:15:48 by alrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PACMAN_H
-# define PACMAN_H
-# include "game.h"
+#ifndef TEST_H
+# define TEST_H
 
-int		launch(char *path_map);
-t_game	*init_game(void);
+void	test(int i, char *str);
+void	test_check_path(char *str);
 
 #endif

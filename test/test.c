@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pacman.h                                           :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 16:18:19 by alrobert          #+#    #+#             */
-/*   Updated: 2023/05/29 16:18:59 by alrobert         ###   ########.fr       */
+/*   Created: 2023/05/29 17:13:27 by alrobert          #+#    #+#             */
+/*   Updated: 2023/05/29 17:26:48 by alrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PACMAN_H
-# define PACMAN_H
-# include "game.h"
+#include "ft_printf.h"
+#include "test.h"
 
-int		launch(char *path_map);
-t_game	*init_game(void);
-
-#endif
+void	test(int condition, char *str)
+{
+	if (condition)
+	{
+		ft_printf("\033[92m[ OK ]\033[0m : %s\033[0m\n", str);
+	}
+	else
+	{
+		ft_printf("\033[91m[ KO ] : %s\033[0m\n", str);
+	}
+}

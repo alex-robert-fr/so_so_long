@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/29 16:17:16 by alrobert          #+#    #+#             */
+/*   Updated: 2023/05/29 16:17:27 by alrobert         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pacman.h"
 #include "libft.h"
 #include "ft_printf.h"
 
 int	main(int argc, char *argv[])
 {
-	(void)argv;
 	int	err;
 
+	(void)argv;
 	err = 0;
 	if (argc == 2)
 	{
@@ -27,8 +39,8 @@ int	main(int argc, char *argv[])
 int	launch(char *path_map)
 {
 	t_game	*init;
-	(void)path_map;
 
+	(void)path_map;
 	init = init_game();
 	return (0);
 }
@@ -40,4 +52,3 @@ t_game	*init_game(void)
 	game = ft_calloc(sizeof(t_game), 1);
 	return (game);
 }
-

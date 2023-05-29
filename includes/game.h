@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pacman.h                                           :+:      :+:    :+:   */
+/*   game.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 16:18:19 by alrobert          #+#    #+#             */
-/*   Updated: 2023/05/29 16:18:59 by alrobert         ###   ########.fr       */
+/*   Created: 2023/05/29 16:18:11 by alrobert          #+#    #+#             */
+/*   Updated: 2023/05/29 16:18:12 by alrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PACMAN_H
-# define PACMAN_H
-# include "game.h"
+#ifndef GAME_H
+# define GAME_H
 
-int		launch(char *path_map);
-t_game	*init_game(void);
+typedef struct s_game {
+}	t_game;
 
 #endif
