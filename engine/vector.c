@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map.h                                              :+:      :+:    :+:   */
+/*   vector.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 16:18:40 by alrobert          #+#    #+#             */
-/*   Updated: 2023/05/29 19:05:37 by alrobert         ###   ########.fr       */
+/*   Created: 2023/05/29 19:20:03 by alrobert          #+#    #+#             */
+/*   Updated: 2023/05/29 19:22:04 by alrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAP_H
-# define MAP_H
-# include "game.h"
+#include "vector.h"
 
-typedef struct s_check_map
+t_vector	v_zero(void)
 {
-	int	err;
-}	t_check_map;
+	t_vector	vector;
 
-typedef struct s_map
+	vector.x = 0;
+	vector.y = 0;
+	return (vector);
+}
+
+t_vector	v_init(int x, int y)
 {
-	char	**map;
-}	t_map;
+	t_vector	vector;
 
-int		check_file(t_game *game, char *file_path);
-int		check_path(char *file_path);
-t_map	*check_map(char *file_path);
-
-#endif
+	vector.x = x;
+	vector.y = y;
+	return (vector);
+}

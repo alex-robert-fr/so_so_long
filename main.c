@@ -6,10 +6,11 @@
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:17:16 by alrobert          #+#    #+#             */
-/*   Updated: 2023/05/29 16:17:27 by alrobert         ###   ########.fr       */
+/*   Updated: 2023/05/29 19:17:48 by alrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "map.h"
 #include "pacman.h"
 #include "libft.h"
 #include "ft_printf.h"
@@ -38,10 +39,11 @@ int	main(int argc, char *argv[])
 
 int	launch(char *path_map)
 {
-	t_game	*init;
+	t_game	*game;
 
 	(void)path_map;
-	init = init_game();
+	game = init_game();
+	check_file(game, path_map);
 	return (0);
 }
 

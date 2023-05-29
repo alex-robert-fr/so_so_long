@@ -40,6 +40,14 @@ test_$(NAME): $(LIBFT_NAME)
     fi
 	@rm -f $(TEST_NAME)
 
+valgrind_test_$(NAME): $(LIBFT_NAME)
+	@clear
+	@echo -e '\x1b[93mCompiling start...\x1b[0m'
+	$(CC) $(CFLAGS) $(SRC_MAP) $(SRC_TEST) $(LIBFT_PATH)/$(LIBFT_NAME) -o $(TEST_NAME) 
+	@echo -e '\x1b[93mCompiling end\x1b[0m'
+	@valgrind ./$(TEST_NAME)
+	@rm -f $(TEST_NAME)
+
 clean:
 	make clean -C $(LIBFT_PATH)
 
