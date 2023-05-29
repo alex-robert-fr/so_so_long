@@ -1,0 +1,18 @@
+[
+ {
+  "directory": "/nfs/homes/alrobert/Documents/oncharbonne/so_long",
+  "arguments": [
+   "clang",
+   "-Wextra",
+   "-Werror",
+   "-Wall",
+   "-Ilib/libft/includes",
+   "-Iincludes/",
+   "main.c",
+   "lib/libft/libft.a",
+   "-o",
+   "so_long"
+  ],
+  "file": "main.c"
+ }
+]

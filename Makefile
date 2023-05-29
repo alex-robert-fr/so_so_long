@@ -1,12 +1,12 @@
 NAME		=	so_long
 CC			=	clang
-CFLAGS		=	-Wextra -Werror -Wall
+CFLAGS		=	-Wextra -Werror -Wall -Ilib/libft/includes -Iincludes/
 LIB_PATH	=	lib/
 LIBFT_PATH	=	$(LIB_PATH)libft
 LIBFT_NAME	=	libft.a
 SRC			=	main.c
 
-all: $(LIBFT_NAME) $(NAME) #$(MLX_NAME)
+all: $(LIBFT_NAME) $(NAME)
 
 $(NAME):
 	$(CC) $(CFLAGS) $(SRC) $(LIBFT_PATH)/$(LIBFT_NAME) -o $(NAME) 
@@ -19,7 +19,6 @@ $(MLX_NAME):
 
 clean:
 	make clean -C $(LIBFT_PATH)
-	#make clean -C $(MLX_PATH)
 
 fclean: clean
 	make fclean -C $(LIBFT_PATH)
