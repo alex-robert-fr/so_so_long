@@ -60,7 +60,7 @@ t_vector	initialize_size(char *str)
 
 t_check_map	process_line(char *str, t_vector *size, t_check_map checks)
 {
-	ft_printf("=> %s\n", str);
+	ft_printf("%s", str);
 	size->y++;
 	if (str)
 		free(str);
