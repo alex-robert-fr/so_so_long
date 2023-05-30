@@ -5,7 +5,8 @@ LIB_PATH	=	lib/
 LIBFT_PATH	=	$(LIB_PATH)libft
 LIBFT_NAME	=	libft.a
 SRC			=	main.c
-SRC_MAP		=	map/check_map.c
+SRC_MAP		=	map/check_map.c			\
+				map/check_file.c
 SRC_ENGINE	=	engine/vector.c
 TEST_NAME	=	test_$(NAME)
 SRC_TEST	=	test/main.c				\
