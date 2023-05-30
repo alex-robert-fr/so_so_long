@@ -17,5 +17,6 @@
 int	main(void)
 {
 	test_check_path("Check path");
+	test_check_map("Check map");
 	return (0);
 }

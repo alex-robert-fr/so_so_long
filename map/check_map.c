@@ -14,7 +14,9 @@
 #include "libft.h"
 #include "get_next_line.h"
 #include "map.h"
+#include "vector.h"
 #include <fcntl.h>
+#include <stdlib.h>
 #include <unistd.h>
 
 int	check_file(t_game *game, char *file_path)
@@ -42,16 +44,53 @@ int	check_path(char *file_path)
 
 t_map	*check_map(char *file_path)
 {
-	int		fd;
-	char	*str;
-	t_map	*map;
+	char		*str;
+	char		*next_str;
+	t_map		*map;
+	t_vector	size;
+	t_check_map	checks;
 
-	fd = open(file_path, O_RDONLY);
+	checks.fd = open(file_path, O_RDONLY);
 	map = ft_calloc(sizeof(t_map), 1);
-	str	= get_next_line(fd);
-	ft_printf("%s\n", str);
+	str = gnl_trim(checks.fd, "\n");
 	if (!str || !map)
-		return ((void*)1);
-	(void)file_path;
-	return (NULL);	
+		return ((void *)1);
+	checks.err = 0;
+	size = v_init(ft_strlen(str), 0);
+	while (str)
+	{
+		#ifdef DEBUG
+			ft_printf("=> %s\n", str);
+		#endif
+		next_str = gnl_trim(checks.fd, "\n");
+		if (size.x != ft_strlen(str))
+			checks.err = 1;
+		size.y++;
+		if (str)
+			free(str);
+		str = next_str;
+	}
+	close(checks.fd);
+	if (checks.err)
+	{
+		free(map);
+		return (NULL);
+	}
+	return (NULL);
+}
+
+char	*gnl_trim(int fd, char const *set)
+{
+	char	*str;
+	char	*tmp_str;
+
+	tmp_str = get_next_line(fd);
+	if (!tmp_str)
+		return (0);
+	str = ft_strtrim(tmp_str, set);
+	if (!str)
+		return (0);
+	if (tmp_str)
+		free(tmp_str);
+	return (str);
 }

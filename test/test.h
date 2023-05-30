@@ -13,7 +13,9 @@
 #ifndef TEST_H
 # define TEST_H
 
+void	header(char *str);
 void	test(int i, char *str);
 void	test_check_path(char *str);
+void	test_check_map(char *str);
 
 #endif

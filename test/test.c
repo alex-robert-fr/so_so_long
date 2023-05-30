@@ -13,6 +13,13 @@
 #include "ft_printf.h"
 #include "test.h"
 
+void	header(char *str)
+{
+	ft_printf("\n--------------------------------\n");
+	ft_printf("%s\n", str);
+	ft_printf("--------------------------------\n");
+}
+
 void	test(int condition, char *str)
 {
 	if (condition)

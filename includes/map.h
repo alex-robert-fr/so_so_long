@@ -12,10 +12,12 @@
 
 #ifndef MAP_H
 # define MAP_H
+//# define DEBUG
 # include "game.h"
 
 typedef struct s_check_map
 {
+	int	fd;
 	int	err;
 }	t_check_map;
 
@@ -24,8 +26,9 @@ typedef struct s_map
 	char	**map;
 }	t_map;
 
-int		check_file(t_game *game, char *file_path);
 int		check_path(char *file_path);
+int		check_file(t_game *game, char *file_path);
+char	*gnl_trim(int fd, char const *set);
 t_map	*check_map(char *file_path);
 
 #endif

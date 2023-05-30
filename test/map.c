@@ -16,10 +16,14 @@
 
 void	test_check_path(char *str)
 {
-	ft_printf("\n--------------------------------\n");
-	ft_printf("%s\n", str);
-	ft_printf("--------------------------------\n");
+	header(str);
 	test(check_path("./main.c") == 0, "Exist file		:	\033[96m./main.c\033[0m");
 	test(check_path("./pablo.c") == 1, "Not exist file		:	\033[96m./pablo.c\033[0m");
 	test(check_path("./test/") == 1, "Directory		: 	\033[96m./test/\033[0m");
+}
+
+void	test_check_map(char *str)
+{
+	header(str);
+	test(check_map("./main.c") == 0, "Random file		:	\033[96m./main.c\033[0m");
 }
