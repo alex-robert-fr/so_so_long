@@ -6,7 +6,7 @@
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:17:16 by alrobert          #+#    #+#             */
-/*   Updated: 2023/05/29 19:17:48 by alrobert         ###   ########.fr       */
+/*   Updated: 2023/06/02 12:09:44 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,16 @@ int	main(int argc, char *argv[])
 int	launch(char *path_map)
 {
 	t_game	*game;
+	int	checkf;
 
 	(void)path_map;
 	game = init_game();
-	check_file(game, path_map);
+	checkf = check_file(game, path_map);
+	if (checkf == 1)
+		ft_printf("%sBad parsing%s\n", RED, RST);
+	if (checkf == 2)
+		ft_printf("%sBad file format%s\n", RED, RST);
+
 	return (0);
 }
 

@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game.h                                             :+:      :+:    :+:   */
+/*   check_map_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alex <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 16:18:11 by alrobert          #+#    #+#             */
-/*   Updated: 2023/06/02 11:29:20 by alex             ###   ########.fr       */
+/*   Created: 2023/06/02 10:58:54 by alex              #+#    #+#             */
+/*   Updated: 2023/06/02 11:19:58 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GAME_H
-# define GAME_H
+#include "map.h"
+#include "libft.h"
 
-typedef struct s_game {
-	
-}	t_game;
-
-#endif
+int	check_line(char *str, int len)
+{
+	if (str)
+	{
+		if ((int)ft_strlen(str) != len)
+			return (0);
+	}
+	return (1);
+}

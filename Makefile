@@ -6,7 +6,8 @@ LIBFT_PATH	=	$(LIB_PATH)libft
 LIBFT_NAME	=	libft.a
 SRC			=	main.c
 SRC_MAP		=	map/check_map.c			\
-				map/check_file.c
+				map/check_file.c		\
+				map/check_map_utils.c
 SRC_ENGINE	=	engine/vector.c
 TEST_NAME	=	test_$(NAME)
 SRC_TEST	=	test/main.c				\
@@ -34,11 +35,11 @@ test_$(NAME): $(LIBFT_NAME)
     allocs=$$(echo "$$line" | grep -oP 'total heap usage: \K\d+'); \
     frees=$$(echo "$$line" | grep -oP 'total heap usage: \d+ allocs, \K\d+'); \
     if [ "$$allocs" -gt "$$frees" ]; then \
-	echo "\033[91m[ KO ] : valgrind, more allocs\033[0m"; \
+	echo "\033[38;2;185;231;28m[ KO ] : valgrind, more allocs\033[0m"; \
     elif [ "$$allocs" -lt "$$frees" ]; then \
-	echo "\033[91m[ KO ] : valgrind, more frees\033[0m"; \
+	echo "\033[38;2;185;231;28m[ KO ] : valgrind, more frees\033[0m"; \
     else \
-	echo "\033[92m[ OK ]\033[0m : valgrind"; \
+	echo "\033[38;2;185;231;28m[ OK ]\033[0m : valgrind"; \
     fi
 	@rm -f $(TEST_NAME)
 

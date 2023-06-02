@@ -24,7 +24,7 @@ void	test(int condition, char *str)
 {
 	if (condition)
 	{
-		ft_printf("\033[92m[ OK ]\033[0m : %s\033[0m\n", str);
+		ft_printf("\033[1m\033[38;2;185;231;28m[ OK ]\033[0m : %s\033[22m\n", str);
 	}
 	else
 	{

@@ -6,7 +6,7 @@
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:48:11 by alrobert          #+#    #+#             */
-/*   Updated: 2023/05/29 19:08:23 by alrobert         ###   ########.fr       */
+/*   Updated: 2023/06/02 11:23:33 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,6 @@ void	test_check_map(char *str)
 {
 	header(str);
 	test(check_map("./main.c") == 0, "Random file		:	\033[96m./main.c\033[0m");
+	test(check_map("./map/random.ber") == 0, "Random file		:	\033[96m./map/random.ber\033[0m");
+	test(check_map("./map/small_ok.ber.ber") != 0, "Random file		:	\033[96m./map/small_ok.ber\033[0m");
 }
