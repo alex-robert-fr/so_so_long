@@ -6,7 +6,7 @@
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:17:16 by alrobert          #+#    #+#             */
-/*   Updated: 2023/06/02 12:09:44 by alex             ###   ########.fr       */
+/*   Updated: 2023/06/02 12:48:03 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int	launch(char *path_map)
 	if (checkf == 1)
 		ft_printf("%sBad parsing%s\n", RED, RST);
 	if (checkf == 2)
+		ft_printf("%sFile does not exist%s\n", RED, RST);
+	if (checkf == 3)
 		ft_printf("%sBad file format%s\n", RED, RST);
 
 	return (0);

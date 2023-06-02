@@ -6,7 +6,7 @@
 /*   By: alex <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 10:50:07 by alex              #+#    #+#             */
-/*   Updated: 2023/06/02 12:11:07 by alex             ###   ########.fr       */
+/*   Updated: 2023/06/02 12:40:10 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,13 @@ int	check_path(char *file_path)
 	err = 0;
 	fd = open(file_path, O_RDONLY);
 	if (fd < 0 || read(fd, 0, 0))
-		err = 1;
-	if (ft_strcmp(file_path + ft_strlen(file_path) -  4, ".ber"))
 		err = 2;
 	else
+	{
 		close(fd);
+		if (ft_strcmp(file_path + ft_strlen(file_path) -  4, ".ber"))
+			err = 3;
+	}
 	return (err);
 }
 

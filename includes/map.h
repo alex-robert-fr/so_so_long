@@ -6,7 +6,7 @@
 /*   By: alrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:18:40 by alrobert          #+#    #+#             */
-/*   Updated: 2023/06/02 11:55:05 by alex             ###   ########.fr       */
+/*   Updated: 2023/06/02 12:41:19 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 # include "vector.h"
 
 //err 1 : Bad parsing
-//err 2: Bad file format
+//err 2 : File does not exist
+//err 3: Bad file format
 typedef struct s_check_map
 {
 	int	fd;
